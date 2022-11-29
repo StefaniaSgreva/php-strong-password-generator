@@ -1,6 +1,6 @@
 PHP Strong Password Generator (php-strong-password-generator):
 
-[]  Milestone 1
+[x]  Milestone 1
     Creare un form che invii in GET la lunghezza della password. 
     Una nostra funzione utilizzerà questo dato per generare una password casuale 
     (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente.
