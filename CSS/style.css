@@ -41,7 +41,7 @@ body{
     border-radius: 50px;
     position: relative;
     background-color: black;
-    box-shadow: 0 0 25px 0 limegreen;
+    box-shadow: 0 0 18px 0 limegreen;
 }
 h2{
     font-size: 2.5rem;
@@ -96,4 +96,14 @@ button:hover{
 .fa-arrow-down{
     font-size: 2rem;
 }
-
+h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 limegreen;
+    color: limegreen;
+}
