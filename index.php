@@ -1,10 +1,10 @@
 <?php
 include __DIR__ . '/functions/functions.php';
 
-$upper_case = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$lower_case = 'abcdefghijklmnopqrstuvwxyz';
+$uppercase = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$lowercase = 'abcdefghijklmnopqrstuvwxyz';
 $numbers = '0123456789';
-$special_chars = '!"£$%&/()=?^é*§ç°[]{}#';
+$symbols = '!"£$%&/()=?^é*§ç°[]{}#';
 
 if (isset($_POST['length']) && !empty($_POST['length'])) {
 
@@ -19,23 +19,29 @@ if (isset($_POST['length']) && !empty($_POST['length'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>PHP Password Generator</title>
 </head>
 
 <body>
-    <form action="index.php" method="POST" name="pswdForm">
-        <label for="pswd-length">Password Length</label>
-        <input type="number" id="length" name="length" value="<?php echo !empty($length) ? $length : ''; ?>">
-        <button type="submit">Generate</button>
-    </form>
-    <div>
-        <?php if (empty($_POST['length'])) { ?>
-        <h4>Please enter a number for the length!</h4>
-        <?php } else { ?>
-        <h4>Your new password is:
-            <?php echo $newPswd ?>
-        </h4>
-        <?php } ?>
+    <div class="container">
+        <div>
+            <?php if (!empty($_POST['length'])) { ?>
+            <h3>Your new password is:
+                <?php echo $newPswd ?>
+            </h3>
+            <?php } else { ?>
+            <h3>Enter below the number of characters you wish for your new password</h3>
+
+            <?php } ?>
+        </div>
+        <form action="index.php" method="POST" name="pswdForm">
+            <label for="pswd-length">Password Length</label>
+            <input type="number" id="length" name="length" value="<?php echo !empty($length) ? $length : ''; ?>"
+                required>
+            <button type="submit">Generate</button>
+            <!-- <button type="reset">Reset</button> -->
+        </form>
     </div>
 </body>
 
