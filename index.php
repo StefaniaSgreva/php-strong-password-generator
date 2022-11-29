@@ -6,7 +6,7 @@ $lower_case = 'abcdefghijklmnopqrstuvwxyz';
 $numbers = '0123456789';
 $special_chars = '!"£$%&/()=?^é*§ç°[]{}#';
 
-if (isset($_POST['length'])) {
+if (isset($_POST['length']) && !empty($_POST['length'])) {
 
     $newPswd = pswd_generator($_POST['length']);
 }
