@@ -20,3 +20,6 @@ echo "<h1> Your new password is: {$_SESSION['userpassword']} </h1>";
     <link rel="stylesheet" href="./CSS/style.css">
     <title>PHP Password Generator</title>
 </head>
+
+<body>
+    <div class="wrapper">
