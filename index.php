@@ -1,13 +1,14 @@
 <?php
+include __DIR__ . '/functions/functions.php';
+
 $upper_case = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $lower_case = 'abcdefghijklmnopqrstuvwxyz';
 $numbers = '0123456789';
 $special_chars = '!"£$%&/()=?^é*§ç°[]{}#';
 
-function pswd_generator($length)
-{
-    $data = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!"£$%&/()=?^é*§ç°[]{}#';
-    return substr(str_shuffle($data), 0, $_POST['length']);
+if (isset($_POST['length'])) {
+
+    $newPswd = pswd_generator($_POST['length']);
 }
 ?>
 
@@ -32,7 +33,7 @@ function pswd_generator($length)
         <h4>Please enter a number for the length!</h4>
         <?php } else { ?>
         <h4>Your new password is:
-            <?php echo pswd_generator($_POST['length']) ?>
+            <?php echo $newPswd ?>
         </h4>
         <?php } ?>
     </div>
