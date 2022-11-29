@@ -6,12 +6,12 @@ PHP Strong Password Generator (php-strong-password-generator):
     (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente.
     Scriviamo tutto (logica e layout) in un unico file index.php
 
-[]  Milestone 2
+[x]  Milestone 2
     Verificato il corretto funzionamento del nostro codice, 
     spostiamo la logica in un file functions.php, 
     che includeremo poi nella pagina principale.
 
-[]  Milestone 3
+[x]  Milestone 3
     Invece di visualizzare la password nella index, 
     effettuare un redirect ad una pagina dedicata 
     che tramite $_SESSION recupererà la password da mostrare all’utente.
